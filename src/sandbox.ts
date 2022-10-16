@@ -115,8 +115,35 @@ let someValue2:stringOrNumber = 12
 type objectWithName = {name: string, id:stringOrNumber}
 
 
-//-------------------------------------
+
+
+//---------------- Class ---------------------
 
 
 
+class Example {
+  client: string;
+  details: string;
+  amount: number;
+
+  constructor(c: string, d: string, a: number) {
+    this.client = c;
+    this.details = d;
+    this.amount = a;
+  }
+
+  format() {
+    return `${this.client} owes $${this.amount} for ${this.details}`
+  }
+}
+
+// this is the class object we know normally 
+// the constructor basically gives default value
+// without the constructor TS will scream saying its not initialized yet 
+// format here is just a function of the Exampe(object) which we can call 
+
+let example: Example[] = []
+// note that the class can be used as a type here 
+// the only items that are created as a class of Example can be 
+// pushed into the example array with the type initiated 
 

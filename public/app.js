@@ -18,3 +18,19 @@ form?.addEventListener('submit', (e) => {
     console.log(detailsInput.value);
     console.log(amountInput.valueAsNumber);
 });
+class Invoice {
+    client;
+    details;
+    amount;
+    constructor(c, d, a) {
+        this.client = c;
+        this.details = d;
+        this.amount = a;
+    }
+    format() {
+        return `${this.client} owes $${this.amount} for ${this.details}`;
+    }
+}
+const inv1 = new Invoice('michael', 'painting the vase', 300);
+const inv2 = new Invoice('sam', 'cleaning the floor', 150);
+let invoices = [];
