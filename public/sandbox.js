@@ -1,3 +1,4 @@
+"use strict";
 const character = 'mario';
 console.log(character);
 const inputs = document.querySelectorAll('input');
@@ -51,4 +52,16 @@ const someFunc2 = (numInput, stringInput) => {
 // here we forced the RETURN VALUE TYPES by placing it after input bracket in a function 
 // this basically removes NaN or undefined possibility
 // no console log requried to varify output 
+const add = (a, b, c) => {
+    console.log(a + b);
+    console.log(c);
+};
+// optional parameter are denoted with a "?" in the bracket 
+const add2 = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c);
+};
+let student1 = 'Michael';
+let someValue1 = 'string';
+let someValue2 = 12;
 //-------------------------------------

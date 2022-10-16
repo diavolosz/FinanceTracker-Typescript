@@ -23,6 +23,7 @@ let anyType: any
 
 //----------------- Array --------------------
 
+
 let stringArr: string[] = []
 stringArr = ['a', 'b']
 // this is how we assign types to an array 
@@ -47,6 +48,7 @@ stringArr2.push('some string')
 
 //------------------ Object -------------------
 
+
 let someObj = {
   name: 'name',
   age: 20
@@ -58,7 +60,6 @@ let someObj = {
 
 
 //----------------- Function --------------------
-
 
 
 const someFunc = (numInput: number, stringInput: string) => {
@@ -78,4 +79,44 @@ const someFunc2 = (numInput: any, stringInput: any): boolean => {
 // no console log requried to varify output 
 
 
+const add = (a: number, b: number, c?: number | string ) => {
+  console.log(a + b)
+  console.log(c)
+}
+// optional parameter are denoted with a "?" in the bracket 
+
+const add2 = (a: number, b: number, c: number | string = 10) => {
+  console.log(a + b)
+  console.log(c)
+}
+// here we have a default value to parameter C 
+// we do not need a "?" here because there is already a default value
+
+
+
 //-------------------------------------
+
+
+// we can also use a 'type' keyword like a vraible 
+// but this is a variable to a set of types restriction
+
+type stringOrNumber = string | number 
+type studentName = string
+
+
+let student1:studentName = 'Michael'
+
+let someValue1:stringOrNumber = 'string'
+let someValue2:stringOrNumber = 12
+
+
+// also works on a object type 
+
+type objectWithName = {name: string, id:stringOrNumber}
+
+
+//-------------------------------------
+
+
+
+
