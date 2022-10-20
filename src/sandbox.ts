@@ -10,7 +10,7 @@ inputs.forEach(input => {
 
 console.log('hi')
 
-//--------------- Intro Types ---------------------
+//---------------- Intro Types ---------------------
 
 
 let string = 'testing'
